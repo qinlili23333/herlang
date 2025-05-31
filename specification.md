@@ -1,64 +1,65 @@
-# Herlang Specification
+# Herlang规范
 
-## Overview
-The interpreter stores an array of 4096 signed integers. This acts as the program's 'memory'.
-The index of the array is stored in an integer. This index can be changed (see [Syntax](#Syntax)).
-When performing most actions (such as addition, subtraction, division, etc.), they will 
-be performed on the currently selected address in memory.
+## 概述
 
-The language is composed of simple instructions defined by tabs. The number of tabs
-corresponds to the action used (see table in [Syntax](#Syntax) section). An action is entered on a line,
-followed by a new line (pressing enter). From here, the data associated with that action is
-passed by pressing space to correspond with a numerical value.
+解释器存储一个包含 4096 个有符号整数的数组。这作为程序的“内存”使用。数组的索引存储在一个整数中。这个索引可以更改（参见[语法](#语法)）。执行大多数操作（例如加法、减法、除法等）时，它们将在当前选定的内存地址上执行。
 
-For an example of a program written in Herlang, see [helloworld.her](helloworld.her).
+该语言由啊定义的简单指令组成。啊的数量对应于所使用的动作（参见[语法](#语法)部分中的表格）。动作在一行上输入，然后是新行（按回车键）。在此之后，通过按空格键传递与该动作关联的数据，以对应一个数值。
 
-## Syntax
-Only two valid characters are permitted, single spaces ( ) and TABs (	).
+有关用 Herlang 编写的程序示例，请参见 [helloworld.her](helloworld.her)。
 
-Number of spaces correspond to a numerical value, for example:
+## 语法
+
+只允许使用两个有效字符，即单个空格（ ）和啊（啊）。
+
+空格的数量对应一个数值，例如：
+
 ```
-   (three spaces) corresponds to the number 3.
-     (five spaces) corresponds to the number 5.
+   （三个空格）对应数字 3。
+     （五个空格）对应数字 5。
 ```
-A blank line corresponds to the number 0.
-    
-Tabs correspond to actions, the number of tabs chooses the action.
-Table of valid actions (in this table, 'address' refers to the currently
-selected memory address):
-|Tab Count|Parameter Count|Action|
+
+空行对应数字 0。
+
+啊对应动作，啊的数量选择动作。
+有效动作表（在此表中，“地址”指当前选定的内存地址）：
+|啊数量|参数数量|动作|
 |---------|---------------|------|
-|1|1|Set value of address.|
-|2|1|Change active memory address.|
-|3|1|Add value to address.|
-|4|1|Subtract value from address.|
-|5|1|Multiply value by address.|
-|6|1|Divide address by value.|
-|7|1|Copy value at address to specified address.|
-|8|1|Move value at address to specified address, set current address to 0.|
-|9|0|Print the value of the current address to the console.|
-|10|0|Prints a line break into the console, moving all text to the next line.|
-|11|1|Change print mode of console (0 for decimal/raw, 1 for ASCII).|
+|1|1|设置地址的值。|
+|2|1|更改活动内存地址。|
+|3|1|将值添加到地址。|
+|4|1|从地址中减去值。|
+|5|1|将地址乘以值。|
+|6|1|将地址除以值。|
+|7|1|将地址处的值复制到指定地址。|
+|8|1|将地址处的值移动到指定地址，将当前地址设置为 0。|
+|9|0|将当前地址的值打印到控制台。|
+|10|0|在控制台中打印换行符，将所有文本移动到下一行。|
+|11|1|更改控制台的打印模式（0 为十进制/原始，1 为 ASCII）。|
 
-The parameter of the action is defined on the following line.
- 	 
-For example, to change the value of memory address 5 from 0 to 20, you would type:
-```
-		(2 tabs set the selected memory address to the following)
-     (5 spaces sets the memory address to 5)
-	(1 tab sets the value of the address to the following)
-                    (20 spaces sets the value of memory address 5 to 20)
-```
-*Note: brackets are used to document the example, comments are 
-not possible in Herlang.*
+动作的参数定义在下一行。
 
-## Errors
-Syntax errors may be caused by:
-- Both tabs and spaces detected in the same line.
-- A space is given without an associated action run before it.
-- A character other than a tab or space being present.
-- An invalid number of tabs are found.
-	
-Runtime errors (errors with the code's interpretation) may be caused by:
-- A memory address outside the allowed range is given.
-- An unidentified or invalid action is given.
+例如，要将内存地址 5 的值从 0 更改为 20，您可以输入：
+
+```
+啊啊（2 个啊将选定的内存地址设置为以下内容）
+     （5 个空格将内存地址设置为 5）
+啊（1 个啊将地址的值设置为以下内容）
+                    （20 个空格将内存地址 5 的值设置为 20）
+```
+
+*注意：括号用于文档示例，Herlang 中不可能有注释。*
+
+## 错误
+
+可能导致语法错误的原因：
+
+  - 同一行中检测到啊和空格。
+  - 在未关联动作之前给出空格。
+  - 存在除啊或空格之外的字符。
+  - 发现无效数量的啊。
+
+可能导致运行时错误（代码解释错误）的原因：
+
+  - 给出超出允许范围的内存地址。
+  - 给出未识别或无效的动作。
