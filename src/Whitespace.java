@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.ArrayList;
 
-public class Whitespace {
+public class Herlang {
 
 	public enum Action {
 		SET,
@@ -25,7 +25,7 @@ public class Whitespace {
 	public static void main(String[] args) {
 		try {
 			if(args.length <= 0) {
-				exitErr("USAGE: java -jar Whitespace.jar <file>.ws");
+				exitErr("USAGE: java -jar Herlang.jar <file>.ws");
 			} else {
 				StringBuilder sb = new StringBuilder();
 				for(int i = 0; i < args.length; i++) {
@@ -45,7 +45,7 @@ public class Whitespace {
 				} else if(f.isDirectory()) {
 					exitErr("\"" + fileName + "\" is a directory, only files are permitted!");
 				} else if(!fileName.toLowerCase().endsWith(".ws")) {
-					exitErr("\"" + fileName + "\" is not a valid Whitespace file!");
+					exitErr("\"" + fileName + "\" is not a valid Herlang file!");
 				}
 				
 				if(logActions) {

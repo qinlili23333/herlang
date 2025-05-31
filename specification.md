@@ -1,4 +1,4 @@
-# Whitespace Specification
+# Herlang Specification
 
 ## Overview
 The interpreter stores an array of 4096 signed integers. This acts as the program's 'memory'.
@@ -11,7 +11,7 @@ corresponds to the action used (see table in [Syntax](#Syntax) section). An acti
 followed by a new line (pressing enter). From here, the data associated with that action is
 passed by pressing space to correspond with a numerical value.
 
-For an example of a program written in Whitespace, see [helloworld.ws](helloworld.ws).
+For an example of a program written in Herlang, see [helloworld.ws](helloworld.ws).
 
 ## Syntax
 Only two valid characters are permitted, single spaces ( ) and TABs (	).
@@ -50,7 +50,7 @@ For example, to change the value of memory address 5 from 0 to 20, you would typ
                     (20 spaces sets the value of memory address 5 to 20)
 ```
 *Note: brackets are used to document the example, comments are 
-not possible in Whitespace.*
+not possible in Herlang.*
 
 ## Errors
 Syntax errors may be caused by:
