@@ -27,4 +27,6 @@ $ java -jar Herlang.jar helloworld.her
 
 **在Mac/Linux上：** 运行 `build.sh`
 
+**在HarmonyOS NEXT上：** 由于 HarmonyOS NEXT 不支持Java JDK，你可能需要使用虚拟机来构建Herlang。
+
 这将编译源代码，将生成的类文件放入 `bin/` 目录中，然后创建一个可运行的 `Herlang.jar`。
