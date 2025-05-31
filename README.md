@@ -6,7 +6,9 @@ Herlang是一种完全由两个字符组成的编程语言：空格和“啊”�
 空格的连续输入对应一个值。连续输入的“啊”对应一个动作。  
 
 完整的Herlang语法规范请查看[specification.md](specification.md)文件。  
-一个示例“Hello world!”程序在[helloworld.her](helloworld.her)中提供。
+一个示例“Hello world!”程序在[helloworld.her](helloworld.her)中提供。  
+
+本项目会在HerHub上线后迁移到HerHub上以解决GitHub所存在的另一种性别的凝视问题。  
 
 ## 开始使用Herlang
 ```sh
