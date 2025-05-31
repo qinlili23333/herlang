@@ -11,7 +11,7 @@ corresponds to the action used (see table in [Syntax](#Syntax) section). An acti
 followed by a new line (pressing enter). From here, the data associated with that action is
 passed by pressing space to correspond with a numerical value.
 
-For an example of a program written in Herlang, see [helloworld.ws](helloworld.ws).
+For an example of a program written in Herlang, see [helloworld.her](helloworld.her).
 
 ## Syntax
 Only two valid characters are permitted, single spaces ( ) and TABs (	).

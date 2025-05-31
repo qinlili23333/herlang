@@ -10,17 +10,17 @@ Herlang is a programming language composed entirely of two characters; space and
 The number of spaces you type consecutively correspond to a value. The amount of tabs you type consecutively correspond to an action.
 
 For a full guide of how to write a program in Herlang, please view the [specification.md](specification.md) file.
-An example "Hello world!" program is provided under [helloworld.ws](helloworld.ws).
+An example "Hello world!" program is provided under [helloworld.her](helloworld.her).
 
 ## Getting Started
 ```sh
 $ git clone https://github.com/Romejanic/Herlang.git
 $ cd Herlang
-$ java -jar Herlang.jar helloworld.ws
+$ java -jar Herlang.jar helloworld.her
 ```
 
 You can optionally run Herlang in a debug mode which will print each step of the program and the value of the current address in memory.
-To access this debug, run the program with the `--log-actions` flag before the file name. This will create a new file called `PROGRAMFILE.actions.log` (e.g. `helloworld.ws.actions.log`), with a list of completed actions during execution.
+To access this debug, run the program with the `--log-actions` flag before the file name. This will create a new file called `PROGRAMFILE.actions.log` (e.g. `helloworld.her.actions.log`), with a list of completed actions during execution.
 
 ## Build from source
 **On Windows:** Run `build.bat`

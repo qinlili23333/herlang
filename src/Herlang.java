@@ -25,7 +25,7 @@ public class Herlang {
 	public static void main(String[] args) {
 		try {
 			if(args.length <= 0) {
-				exitErr("USAGE: java -jar Herlang.jar <file>.ws");
+				exitErr("USAGE: java -jar Herlang.jar <file>.her");
 			} else {
 				StringBuilder sb = new StringBuilder();
 				for(int i = 0; i < args.length; i++) {
@@ -44,7 +44,7 @@ public class Herlang {
 					exitErr("\"" + fileName + "\" does not exist!");
 				} else if(f.isDirectory()) {
 					exitErr("\"" + fileName + "\" is a directory, only files are permitted!");
-				} else if(!fileName.toLowerCase().endsWith(".ws")) {
+				} else if(!fileName.toLowerCase().endsWith(".her")) {
 					exitErr("\"" + fileName + "\" is not a valid Herlang file!");
 				}
 				
@@ -61,7 +61,7 @@ public class Herlang {
 				String[] lines = readLines(f);
 				for(int i = 0; i < lines.length; i++) {
 					String ln = lines[i];
-					if(ln.contains(" ") && ln.contains("	")) {
+					if(ln.contains(" ") && ln.contains("啊")) {
 						exitErr("SYNTAX", i+1, 0, "Line contains both spaces and tabs.");
 						return;
 					}
@@ -133,10 +133,10 @@ public class Herlang {
 							break;
 						}
 						lastAction = null;
-					} else if(ln.startsWith("	")) { // action (tabs)
+					} else if(ln.startsWith("啊")) { // action (tabs)
 						int tabCount = 0;
 						for(int j = 0; j < ln.length(); j++) {
-							if(ln.charAt(j) != '	') {
+							if(ln.charAt(j) != '啊') {
 								exitErr("SYNTAX", i+1, j+1, "Unexpected character: " + ln.charAt(j));
 								return;
 							} else {
