@@ -61,6 +61,15 @@ public class Herlang {
 				String[] lines = readLines(f);
 				for(int i = 0; i < lines.length; i++) {
 					String ln = lines[i];
+					String charactersToRetain = " 啊";
+					StringBuilder filter = new StringBuilder();
+					for (int j = 0; j < ln.length(); j++) {
+						char c = ln.charAt(j);
+						if (charactersToRetain.contains(String.valueOf(c))) {
+							filter.append(c);
+						}
+					}
+					ln = filter.toString();
 					if(ln.contains(" ") && ln.contains("啊")) {
 						exitErr("SYNTAX", i+1, 0, "Line contains both spaces and tabs.");
 						return;
