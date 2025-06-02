@@ -27,6 +27,7 @@ $ java -jar Herlang.jar helloworld.her
 要从源代码构建Herlang，你需要安装Java JDK 8或更高版本。
 
 **在Windows上：** 运行 `build.bat`
+(Windows环境会遇到编码的问题，因为java工具在Windows平台的默认编码方式是GBK，但文中代码为UTF-8； 此时可以通过将文件重新保存为GBK编码方式即可，安装命令已同步更改)
 
 **在Mac/Linux上：** 运行 `build.sh`
 
