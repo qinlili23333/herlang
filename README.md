@@ -33,3 +33,10 @@ $ java -jar Herlang.jar helloworld.her
 **在HarmonyOS NEXT上：** 由于 HarmonyOS NEXT 不支持Java JDK，你可能需要使用虚拟机来构建Herlang。
 
 这将编译源代码，将生成的类文件放入 `bin/` 目录中，然后创建一个可运行的 `Herlang.jar`。
+
+
+## HerlangExt
+
+Herlang 没有控制流————它不是图灵完备的，HerlangExt 作为 Herlang 的拓展意在使 Herlang 成为图灵完备的编程语言。 Make Herlang Great Again！
+
+`src/examples` 下面有一些示例。
