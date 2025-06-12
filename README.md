@@ -27,11 +27,11 @@ $ java -jar Herlang.jar helloworld.her
 要从源代码构建Herlang，你需要安装Java JDK 8或更高版本。
 
 **在Windows上：** 运行 `build.bat`
-(Windows环境会遇到编码的问题，因为java工具在Windows平台的默认编码方式是GBK，但文中代码为UTF-8； 此时可以通过将文件重新保存为GBK编码方式即可，安装命令已同步更改)
+(Windows环境会遇到编码的问题，因为java工具在Windows平台的默认编码方式是跟随系统安装语言的，但文中代码为UTF-8； 此时可以通过将文件重新保存为系统设置的默认编码方式即可，安装命令已同步更改)
 
 **在Mac/Linux上：** 运行 `build.sh`
 
-**在HarmonyOS NEXT上：** 由于 HarmonyOS NEXT 不支持Java JDK，你可能需要使用虚拟机来构建Herlang。
+**在HarmonyOS NEXT上：** 由于 HarmonyOS NEXT 不支持Java JDK，你需要安装Oseasy虚拟机，然后遵循Windows的构建方法
 
 这将编译源代码，将生成的类文件放入 `bin/` 目录中，然后创建一个可运行的 `Herlang.jar`。
 
