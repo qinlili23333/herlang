@@ -1,4 +1,5 @@
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
 public class Herlang {
@@ -241,7 +242,7 @@ public class Herlang {
  	}
 
 	private static String[] readLines(File file) throws Exception {
-		BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
+		BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8));
 		ArrayList<String> lines = new ArrayList<String>();
 		for(String ln = reader.readLine(); ln != null; ln = reader.readLine()) {
 			lines.add(ln);
